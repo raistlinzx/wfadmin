@@ -41,14 +41,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>${username?:'Admin'} <i class="caret"></i></span>
+                                <span>${session.wfadmin_user.name?:'Admin'} <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="${request.contextPath}/images/webfileadmin/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        ${username?:'Admin'} - Web Admin
+                                        ${session.wfadmin_user.name?:'Admin'}
                                         <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
@@ -76,7 +76,7 @@
                             <img src="${request.contextPath}/images/webfileadmin/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, ${username?:'Admin'}</p>
+                            <p>Hello, ${session.wfadmin_user.name?:'Admin'}</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>

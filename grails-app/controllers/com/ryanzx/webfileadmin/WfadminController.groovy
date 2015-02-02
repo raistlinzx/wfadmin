@@ -2,6 +2,15 @@ package com.ryanzx.webfileadmin
 
 
 class WfadminController {
+	def beforeInterceptor = [action: this.&auth, except: 'login']
+	// defined with private scope, so it's not considered an action
+	private auth() {
+	    if (!session.wfadmin_user) {
+	        redirect(action: 'login')
+	        return false
+	    }
+	}
+
 	def afterInterceptor = { model ->
         model.paths = getPath()
         model.root = servletContext.getRealPath('')
@@ -15,6 +24,33 @@ class WfadminController {
 			return paths.containsKey(path)?paths."${path}":null
 		}
 		return paths
+	}
+
+	private def getUser(def username, def password) {
+		def users = grailsApplication.config.wfadmin.users?:[admin:[username:'admin',password:'21232f297a57a5a743894a0e4a801fc3',name:'Admin1']]
+		println users
+		//println password.encodeAsMD5()
+		def user = null
+		if(users) {
+			user = users.find { it.value.username == username && it.value.password == password.encodeAsMD5() }.value
+		}
+		return user
+	}
+
+	def login = {
+		if(params.username && params.password) {
+			def user = getUser(params.username, params.password)
+			if(user) {
+				//println user
+				session.wfadmin_user=[useranme: user.username, name: user.name]
+				redirect uri: "/wfadmin"
+			}
+		}
+	}
+
+	def logout = {
+		session.wfadmin_user = null
+		redirect action: 'login'
 	}
 
 	def index = {

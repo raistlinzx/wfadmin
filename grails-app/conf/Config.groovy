@@ -44,4 +44,16 @@ wfadmin {
       path = '/WEB-INF/grails-app/views'
     }
   }
+  users {
+    admin {
+      username = 'admin'
+      password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+      name = 'Admin'
+    }
+    user {
+      username = 'user'
+      password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+      name = 'User1'
+    }
+  }
 }

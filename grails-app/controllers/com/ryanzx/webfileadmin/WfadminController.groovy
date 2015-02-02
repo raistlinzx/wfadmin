@@ -28,7 +28,7 @@ class WfadminController {
 
 	private def getUser(def username, def password) {
 		def users = grailsApplication.config.wfadmin.users?:[admin:[username:'admin',password:'21232f297a57a5a743894a0e4a801fc3',name:'Admin1']]
-		println users
+		//println users
 		//println password.encodeAsMD5()
 		def user = null
 		if(users) {

@@ -32,8 +32,8 @@ function saveFile() {
 		},
 		error: function (XMLHttpRequest, textStatus, errorThrown) {
 			$('div.alert-danger').find('span').html(errorThrown);
-			$('div.alert-danger').fadeToggle();	
-		}     
+			$('div.alert-danger').fadeToggle();
+		}
 	})
 }
 

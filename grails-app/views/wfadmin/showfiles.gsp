@@ -20,7 +20,7 @@
 
         <!-- Main content -->
         <section class="content">
-            
+
             <g:if test="${error}">
             <div class="callout callout-danger">
                 <h4>${error}</h4>
@@ -112,7 +112,7 @@
                   </div>
                 </div>
             </g:else>
-            
+
         </section><!-- /.content -->
     </body>
 </html>

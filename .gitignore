@@ -1,0 +1,6 @@
+*.log
+/plugin.xml
+/target
+/web-app/WEB-INF
+/grails-webfileadmin-*.zip
+/grails-webfileadmin-*.zip.sha1

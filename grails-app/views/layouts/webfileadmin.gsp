@@ -36,7 +36,7 @@
                 </a>
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
-                        
+
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -52,7 +52,7 @@
                                         <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
-                                
+
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
@@ -114,6 +114,6 @@
         <script src="${request.contextPath}/js/webfileadmin/AdminLTE/app.js" type="text/javascript"></script>
 
         <script src="${request.contextPath}/js/webfileadmin/control.js" type="text/javascript"></script>
-        
+
     </body>
 </html>

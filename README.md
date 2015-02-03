@@ -22,17 +22,17 @@ No need change your Config.groovy. This plugin will work using default config li
           name = 'CSS'
           path = '/css'
         }
-        
+
         images {
           name = 'Images'
           path = '/images'
         }
-        
+
         js {
           name = 'Javascript'
           path = '/js'
         }
-        
+
         views {
           name = 'Views'
           path = '/WEB-INF/grails-app/views'
@@ -51,7 +51,7 @@ No need change your Config.groovy. This plugin will work using default config li
 Copy the default config section into your `Config.groovy`, then edit the `paths` section .
 
     js {
-      name = 'Javascript' 
+      name = 'Javascript'
       path = '/js'        // should be a folder path in `web-app` or in your WAR file.
     }
 

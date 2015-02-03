@@ -55,10 +55,15 @@ By default, you can open `/wfadmin` without login. It means you can use any othe
       // in 'wfadmin' section, add below lines
       auth.useLocalData = true
       users {
-        user {
-          username = 'USERNAME'
+        user1 {
+          username = 'USERNAME1'
           password = 'SHA1 of password' //  SHA1 of 'admin'
-          name = 'NAME'
+          name = 'USER1 NAME'
+        }
+        user2 {
+          username = 'USERNAME2'
+          password = 'SHA1 of password' //  SHA1 of 'admin'
+          name = 'USER2 NAME'
         }
       }
     }

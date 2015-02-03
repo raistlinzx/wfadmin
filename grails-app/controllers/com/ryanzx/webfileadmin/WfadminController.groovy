@@ -1,5 +1,5 @@
 package com.ryanzx.webfileadmin
-
+import java.security.MessageDigest
 
 class WfadminController {
 	def beforeInterceptor = [action: this.&auth, except: 'login']
@@ -27,12 +27,16 @@ class WfadminController {
 	}
 
 	private def getUser(def username, def password) {
-		def users = grailsApplication.config.wfadmin.users?:[admin:[username:'admin',password:'21232f297a57a5a743894a0e4a801fc3',name:'Admin1']]
+		def users = grailsApplication.config.wfadmin.users?:[admin:[username:'admin',password:'d033e22ae348aeb5660fc2140aec35850c4da997',name:'Admin1']]
 		//println users
 		//println password.encodeAsMD5()
+		def messageDigest = MessageDigest.getInstance('SHA1')
+		messageDigest.update(password.getBytes())
+		def passwordSha1Hex = new BigInteger(1, messageDigest.digest()).toString(16).padLeft( 40, '0' )
+
 		def user = null
 		if(users) {
-			user = users.find { it.value.username == username && it.value.password == password.encodeAsMD5() }.value
+			user = users.find { it.value.username == username && it.value.password == passwordSha1Hex }?.value
 		}
 		return user
 	}
@@ -45,6 +49,7 @@ class WfadminController {
 				session.wfadmin_user=[useranme: user.username, name: user.name]
 				redirect uri: "/wfadmin"
 			}
+
 		}
 	}
 

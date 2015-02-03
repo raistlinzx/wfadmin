@@ -47,7 +47,7 @@ wfadmin {
   users {
     admin {
       username = 'admin'
-      password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+      password = 'd033e22ae348aeb5660fc2140aec35850c4da997' //  SHA1 of 'admin'
       name = 'Admin'
     }
   }

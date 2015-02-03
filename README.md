@@ -41,7 +41,7 @@ No need change your Config.groovy. This plugin will work using default config li
       users {
         admin {
           username = 'admin'
-          password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+          password = '21232f297a57a5a743894a0e4a801fc3' //  SHA1 of 'admin'
           name = 'Admin'
         }
       }
@@ -58,7 +58,7 @@ Copy the default config section into your `Config.groovy`, then edit the `paths`
 #### Add your custom users
     user {
       username = 'USERNAME'
-      password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+      password = '21232f297a57a5a743894a0e4a801fc3' //  SHA1 of 'admin'
       name = 'NAME'
     }
 

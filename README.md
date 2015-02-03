@@ -38,6 +38,13 @@ No need change your Config.groovy. This plugin will work using default config li
           path = '/WEB-INF/grails-app/views'
         }
       }
+      users {
+        admin {
+          username = 'admin'
+          password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+          name = 'Admin'
+        }
+      }
     }
 
 #### Add your custom path
@@ -48,8 +55,11 @@ Copy the default config section into your `Config.groovy`, then edit the `paths`
       path = '/js'        // should be a folder path in `web-app` or in your WAR file.
     }
 
-
-## Features in Next Version
-- Login and Edit your files with a simple security filter.
+#### Add your custom users
+    user {
+      username = 'USERNAME'
+      password = '21232f297a57a5a743894a0e4a801fc3' //  MD5 of 'admin'
+      name = 'NAME'
+    }
 
 See docs at http://grails.org/plugin/webfileadmin

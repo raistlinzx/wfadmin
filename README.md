@@ -57,6 +57,7 @@ Copy the default config section into your `Config.groovy`, then edit the `paths`
 
 #### Add your custom users
 edit the `users` section, you can add any user you want.
+
     user {
       username = 'USERNAME'
       password = 'd033e22ae348aeb5660fc2140aec35850c4da997' //  SHA1 of 'admin'

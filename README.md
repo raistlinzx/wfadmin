@@ -41,7 +41,7 @@ No need change your Config.groovy. This plugin will work using default config li
     }
 
 #### Add your custom path
-Copy the default config section into your `Config.groovy`, then edit the `paths` section .
+Copy the default config section into your `Config.groovy`, then edit the `paths` section.
 
     js {
       name = 'Javascript'

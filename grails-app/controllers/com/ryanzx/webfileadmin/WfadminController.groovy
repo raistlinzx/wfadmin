@@ -19,7 +19,7 @@ class WfadminController {
 	private auth() {
 		// if do not want to use local user data, then add below line into wfadmin's section in Config.groovy
 		// auth.useLocalData = false
-		if(!grailsApplication.config.wfadmin.auth.useLocalData?:true) return true
+		if(!grailsApplication.config.wfadmin.auth.useLocalData) return true
 
 		if (!session.wfadmin_user) {
 			redirect(action: 'login')
